@@ -1,0 +1,17 @@
+:root{
+    --public-navbar-height:70px;
+}
+
+.public-navbar{
+    height: var(--public-navbar-height);
+}
+.public-navbar .mega-menu-container .mega-menu{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: var(--public-navbar-height);
+}
+
+.alert{
+    top: calc( var(--public-navbar-height) + 30px );
+}

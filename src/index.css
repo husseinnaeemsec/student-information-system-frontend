@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@tailwind utilities;
+
+
+[type=checkbox]:checked{
+    background-color: #7e22ce;
+    appearance: none;
+    border-radius: 5px;
+    background-image: url('./assets/check.svg');
+
+}
