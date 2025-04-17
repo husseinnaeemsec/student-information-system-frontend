@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+# EduPulse – Student Information System (SIS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EduPulse is a comprehensive and scalable **Student Information System (SIS)** built with **Django** (Backend) and **React** (Frontend). Designed for schools, academies, and educational organizations, EduPulse simplifies the management of students, staff, classes, attendance, and communications – all in one secure platform.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![EduPulse Dashboard Screenshot](./img/screenshot.png)
 
-## Expanding the ESLint configuration
+## 🎯 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧑‍🎓 Student Management
+- Add, edit, and remove students
+- View student profiles with personal, academic, and contact information
+- Assign students to classrooms
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 🏫 Academic Management
+- Class and grade structure setup
+- Subject management
+- Timetable scheduling (optional/future)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 👨‍🏫 Staff and Teacher Management
+- Admin panel for managing staff roles and permissions
+- Assign teachers to specific classrooms or subjects
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🧾 Attendance and Performance
+- Daily attendance tracking
+- Performance tracking and grading (coming soon)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 📩 Email & Notification System
+- Send announcements, notices, and updates via email to:
+  - Students
+  - Parents
+  - Staff
+- Automated birthday or event emails (optional)
+
+### 🔐 Authentication & Roles
+- Secure user login/signup
+- Admin, staff, teacher roles
+- Role-based access control
+
+### 📊 Dashboard
+- Overview of total students, classrooms, active staff, etc.
+- Filtered views by class, age, gender
+
+### 🌐 Fully Responsive UI
+- Clean and responsive interface using **TailwindCSS**
+- Accessible across desktop, tablet, and mobile devices
+
+---
+
+## 🛠 Tech Stack
+
+| Tech             | Description                          |
+|------------------|--------------------------------------|
+| **Django**       | Backend framework, REST API (DRF)    |
+| **React**        | Frontend SPA using TypeScript        |
+| **Tailwind CSS** | Utility-first modern UI framework    |
+| **PostgreSQL**   | Default production database          |
+| **Docker**       | Containerized dev & prod environments|
+| **SMTP / Mailgun** | For sending system emails          |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- PostgreSQL (or SQLite for dev)
+
